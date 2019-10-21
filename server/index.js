@@ -1,15 +1,16 @@
 const dotenv = require('dotenv');
-const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-
-const routes = require('./routes');
 
 const result = dotenv.config();
 
 if (result.error) {
   throw result.error
 }
+
+const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+
+const routes = require('./routes');
 
 const app = new express();
 
