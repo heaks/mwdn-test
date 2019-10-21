@@ -1,4 +1,10 @@
-require('dotenv').config();
+const dotenv = require('dotenv');
+const result = dotenv.config();
+
+if (result.error) {
+  throw result.error
+}
+
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');

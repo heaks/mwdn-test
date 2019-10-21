@@ -6,6 +6,12 @@ const TOKEN = '71031a985f9c063533172ee2dc610a43';
 // const SID = process.env.SID;
 // const TOKEN = process.env.TOKEN;
 
+console.log('SID', SID, typeof SID);
+console.log('TOKEN', TOKEN, typeof TOKEN);
+
+console.log('>>>' + SID + '<<<', typeof SID);
+console.log('>>>' + TOKEN + '<<<', typeof TOKEN);
+
 const client = new twilio(SID, TOKEN);
 
 module.exports = client;
