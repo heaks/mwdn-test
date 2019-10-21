@@ -24,7 +24,7 @@ function App() {
         }
       })
       .catch(() => {
-        setResult({ type: 'error', message: 'Something bad happened' });
+        setResult({ type: 'error', message: 'Service is unreachable' });
       });
   };
   

@@ -24,7 +24,7 @@ router.post('/send', (req, res) => {
       res.send({ message, status: 200 });
     })
     .catch((err) => {
-      console.log('Something bad happened:', err);
+      console.log('ERROR:', err);
       res.send(err);
     });
 });
