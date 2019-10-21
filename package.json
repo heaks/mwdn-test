@@ -14,15 +14,17 @@
     "twilio": "^3.36.0"
   },
   "devDependencies": {
-    "nodemon": "^1.19.4"
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.4",
+    "supertest": "^4.0.2"
   },
   "scripts": {
     "client": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest",
     "eject": "react-scripts eject",
-    "server": "node server/index.js",
-    "dev": "nodemon server/index.js"
+    "server": "node server/start.js",
+    "dev": "nodemon server/start.js"
   },
   "eslintConfig": {
     "extends": "react-app"

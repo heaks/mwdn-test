@@ -6,6 +6,7 @@ const twilio = require('./twilioClient');
 const link = 'https://heaks.github.io/mwdn-camera/';
 
 router.get('/test', (req, res) => {
+  res.status(200);
   res.send('Sms server works');
 });
 
@@ -15,7 +16,6 @@ router.post('/send', (req, res) => {
   twilio.messages.create({
     body: link,
     to: sendTo,
-    // from: '+180225410701234',
     from: '+18022541070',
   })
     .then(message => {

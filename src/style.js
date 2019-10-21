@@ -1,7 +1,7 @@
 export default {
   main: {
     textAlign: 'center',
-    marginTop: '30%',
+    marginTop: '300px',
   },
   text: {
     fontFamily: 'Arial',
