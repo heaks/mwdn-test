@@ -5,9 +5,7 @@ const twilio = require('./twilioClient');
 
 const link = 'https://heaks.github.io/mwdn-camera/';
 
-// const NUMBER = process.env.NUMBER;
-const NUMBER = '+18022541070';
-console.log('NUMBER:', NUMBER, typeof NUMBER);
+const NUMBER = process.env.NUMBER;
 
 router.get('/test', (req, res) => {
   res.status(200);

@@ -20,16 +20,12 @@ function App() {
         if (res.status > 200) {
           setResult({ type: 'error', message: res.message });
         } else {
-          setResult({ type: 'success', message: `Message to ${recipient} delivered`});
+          setResult({ type: 'success', message: `Message to ${recipient} was delivered`});
         }
       })
       .catch(() => {
         setResult({ type: 'error', message: 'Something bad happened' });
       });
-  };
-  
-  const setMyNumber = () => {
-    setRecipient('+380688461841');
   };
   
   return (
@@ -43,16 +39,13 @@ function App() {
             value={recipient}
             onChange={e => {
               const value = e.target.value;
-              console.log('value:', value);
-              setRecipient(value);
+              const regular = new RegExp("^[0-9+/]*$");
+              if(value.match(regular) || value === '+' || !value) setRecipient(value);
             }}
           />
         </div>
         <div style={styles.buttonWrapper}>
           <button onClick={sendMessage} style={styles.button}>Send</button>
-        </div>
-        <div style={styles.buttonWrapper}>
-          <button onClick={setMyNumber} style={styles.button}>Set My Number</button>
         </div>
         <div style={styles.textContainer}>
           {result && (
